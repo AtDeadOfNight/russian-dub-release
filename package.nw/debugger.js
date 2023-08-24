@@ -16,3 +16,11 @@ ws.addEventListener('message', (event) => {
   const result = eval(event.data)
   ws.send(JSON.stringify(result))
 })
+
+window.addEventListener('error', (msg, url, line, col, error) => {
+  ws.send(JSON.stringify({ msg, url, line, col, error }))
+})
+
+ws.addEventListener('open', () => {
+  ws.send('Connected from ' + document.querySelector('title').innerText)
+})

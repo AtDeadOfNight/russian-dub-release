@@ -9,7 +9,7 @@ fastify.register(fastifyWebsocket)
 
 function log(data) {
   readline.cursorTo(process.stdout, 0, process.stdout.rows + 1)
-  process.stdout.write(data + '\n')
+  process.stdout.write('↓ ' + data + '\n')
 }
 
 const rl = readline.createInterface({
@@ -21,7 +21,7 @@ const rl = readline.createInterface({
 fastify.register(async function (fastify) {
   fastify.get('/', { websocket: true }, (connection) => {
     const sendCommand = line => {
-      connection.socket.send(line.trim() + '\n')
+      connection.socket.send(line.trim())
       rl.prompt()
     }
 
