@@ -16,7 +16,7 @@ setTimeout(() => {
         if(relativeTime < 0) return
 
         if(Math.abs(overlayPlayer.currentTime - relativeTime) > 0.1) {
-          console.log('Corrected overlay player time from', overlayPlayer.currentTime, 'to', relativeTime, 'retreived from vplayertime')
+          // console.log('Corrected overlay player time from', overlayPlayer.currentTime, 'to', relativeTime, 'retreived from vplayertime')
           overlayPlayer.currentTime = relativeTime
         }
       }, 10)
