@@ -1,0 +1,1 @@
+window.ruFragmentsMap = {"title":[0,14],"evp":[4939.2,5025.2]}

@@ -13,12 +13,22 @@ window.console.error = (...args) => {
 }
 
 ws.addEventListener('message', (event) => {
-  const result = eval(event.data)
-  ws.send(JSON.stringify(result))
+  try {
+    const result = eval(event.data)
+    ws.send(JSON.stringify(result))
+  } catch(err) {
+    ws.send(JSON.stringify(err, Object.getOwnPropertyNames(err)))
+  }
 })
 
 window.addEventListener('error', (msg, url, line, col, error) => {
-  ws.send(JSON.stringify({ msg, url, line, col, error }))
+  ws.send(JSON.stringify({ 
+    msg: JSON.stringify(msg), 
+    url: JSON.stringify(url), 
+    line: JSON.stringify(line), 
+    col: JSON.stringify(col),
+    error: JSON.stringify(err, Object.getOwnPropertyNames(err))
+  }))
 })
 
 ws.addEventListener('open', () => {

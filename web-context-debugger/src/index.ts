@@ -9,7 +9,7 @@ fastify.register(fastifyWebsocket)
 
 function log(data) {
   readline.cursorTo(process.stdout, 0, process.stdout.rows + 1)
-  process.stdout.write('↓ ' + data + '\n')
+  process.stdout.write('↓ ' + data.replaceAll('\\n', '\n') + '\n')
 }
 
 const rl = readline.createInterface({
@@ -51,3 +51,5 @@ rl.on('SIGINT', function() {
   rl.close()
   process.exit(0)
 })
+
+//Object.keys(window).map(k => [k, typeof window[k], typeof window[k] === 'function' ? window[k].length : (typeof window[k] === 'object' && window[k] !== null && window[k] !== undefined && !Array.isArray(window[k])) ? Object.keys(window[k]) : Array.isArray(window[k]) ? [...window[k].slice(0, 5), '+...'] : window[k]]).join(';')
