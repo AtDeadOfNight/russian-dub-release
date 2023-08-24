@@ -5,7 +5,8 @@ import { fileURLToPath } from 'url'
 const startTimestamps = {
   'title': 0,
   'evp': 1*60*60 + 22*60 + 19 + 20/30,
-  'basement_key': 1*60*60 + 18*60 + 48 + 26/30
+  'basement_key': 1*60*60 + 18*60 + 48 + 26/30,
+  'out-of-order': 1*60 + 10 + 2/30
 }
 
 const getMP4Length = async (filename: string) => {
