@@ -1,6 +1,7 @@
 setTimeout(() => {
   try {
     const filesRoot = 'chrome-extension://mnceojblkdhadkikjpllbmbhmcffacik'
+    const debugMenu = document.querySelector('#debug-menu')
     const player = document.querySelector('#vplayer')
     const overlayPlayer = document.querySelector('#ru-fragment-overlay-player')
     overlayPlayer.style.display = 'none'
@@ -25,6 +26,7 @@ setTimeout(() => {
     console.log('Started up ru-fragments overlay')
 
     const onTimeUpdate = () => {
+      debugMenu.innerText = `playerCurrentTime: ${player.currentTime}\nisOverlayActive: ${isOverlayActive}`
       for(const [fragment, time] of fragmentsMap) {
         if(player.currentTime >= time[0] && player.currentTime <= time[1]) {
           if(isOverlayActive) {

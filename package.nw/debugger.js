@@ -35,3 +35,9 @@ window.addEventListener('error', (msg, url, line, col, error) => {
 ws.addEventListener('open', () => {
   ws.send('Connected from ' + document.querySelector('title').innerText + '!')
 })
+
+window.addEventListener('keydown', event => {
+  if(event.key === 'F2') {
+    document.querySelector('#debug-menu').style.display = 'block'
+  }
+})
