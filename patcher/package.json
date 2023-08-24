@@ -1,0 +1,14 @@
+{
+  "name": "patcher",
+  "author": {
+    "name": "hloth",
+    "email": "adon@hloth.dev"
+  },
+  "type": "module",
+  "devDependencies": {
+    "eslint": "^8.47.0"
+  },
+  "dependencies": {
+    "ora": "^7.0.1"
+  }
+}
