@@ -3,11 +3,28 @@ import fs from 'fs/promises'
 import { dirname } from 'path'
 import { fileURLToPath } from 'url'
 
-const startTimestamps = {
-  'title': 0,
-  'evp': 1*60*60 + 22*60 + 19 + 20/30,
-  'basement_key': 1*60*60 + 18*60 + 48 + 26/30,
-  'out-of-order': 1*60 + 10 + 2/30
+const startTimestamps: {
+  [key: string]: {
+    start: number,
+    priority: number
+  }
+} = {
+  'title': {
+    start: 0,
+    priority: 1
+  },
+  'evp': {
+    start: 1*60*60 + 22*60 + 19 + 20/30,
+    priority: 3
+  },
+  'basement_key': {
+    start: 1*60*60 + 18*60 + 48 + 26/30,
+    priority: 2
+  },
+  'out-of-order': {
+    start: 1*60 + 10 + 2/30,
+    priority: 1
+  }
 }
 
 // const getMP4Length = async (filename: string) => {
@@ -59,9 +76,15 @@ const __dirname = dirname(fileURLToPath(import.meta.url)) + '/../'
 const baseDir = __dirname + '../package.nw'
 
 const fragmentsMap = {}
-for(const [fragmentName, timeStart] of Object.entries(startTimestamps)) {
+for(const [fragmentName, { start }] of Object.entries(startTimestamps)) {
   const fragmentFile = baseDir + `/media/video/ru_fragment_${fragmentName}.mp4`
-  fragmentsMap[fragmentName] = [timeStart, timeStart + await getMP4Length(fragmentFile)]
+  fragmentsMap[fragmentName] = [start, start + await getMP4Length(fragmentFile)]
 }
 
-fs.writeFile(baseDir + '/js/ru-fragments-map.js', `window.ruFragmentsMap = ${JSON.stringify(fragmentsMap)}`)
+fs.writeFile(baseDir + '/js/ru-fragments-map.js', `window.ruFragmentsMap = ${JSON.stringify({ 
+  timestamps: fragmentsMap, 
+  priorities: Object.fromEntries(
+    Object.entries(startTimestamps)
+      .map(([fragmentName, { priority }]) => [fragmentName, priority])
+  )
+})}`)

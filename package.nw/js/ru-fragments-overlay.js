@@ -6,8 +6,8 @@ setTimeout(() => {
     const overlayPlayer = document.querySelector('#ru-fragment-overlay-player')
     overlayPlayer.style.display = 'none'
 
-    const fragmentsMap = Object.entries(window.ruFragmentsMap)
-    let isOverlayActive = false
+    const fragmentsMap = Object.entries(window.ruFragmentsMap.timestamps)
+    let activeOverlay = false
 
     let interval = null
     const startFrequentUpdates = (startTime) => {
@@ -26,14 +26,17 @@ setTimeout(() => {
     console.log('Started up ru-fragments overlay')
 
     const onTimeUpdate = () => {
-      debugMenu.innerText = `playerCurrentTime: ${player.currentTime}\nisOverlayActive: ${isOverlayActive}`
+      debugMenu.innerText = `playerCurrentTime: ${player.currentTime}\nisOverlayActive: ${activeOverlay !== false}`
       for(const [fragment, time] of fragmentsMap) {
+        const fragmentPriority = window.ruFragmentsMap.priorities[fragment]
         if(player.currentTime >= time[0] && player.currentTime <= time[1]) {
-          if(isOverlayActive) {
+          if(activeOverlay === fragment) return
+          const activeOverlayPriority = activeOverlay === false ? -1 : window.ruFragmentsMap.priorities[activeOverlay]
+          if(activeOverlay !== false && activeOverlayPriority >= fragmentPriority) {
             return
           }
           
-          isOverlayActive = true
+          activeOverlay = fragment
           overlayPlayer.src = `${filesRoot}/media/video/ru_fragment_${fragment}.mp4`
           if(!player.paused) {
             overlayPlayer.currentTime = player.currentTime - time[0]
@@ -41,14 +44,15 @@ setTimeout(() => {
           }
           overlayPlayer.style.display = 'block'
 
+          if(interval !== null) clearInterval(interval)
           startFrequentUpdates(time[0])
 
           return
         }
       }
 
-      if(isOverlayActive) {
-        isOverlayActive = false
+      if(activeOverlay !== false) {
+        activeOverlay = false
         clearInterval(interval)
         overlayPlayer.pause()
         overlayPlayer.currentTime = 0
@@ -60,13 +64,13 @@ setTimeout(() => {
     player.addEventListener('timeupdate', onTimeUpdate)
 
     player.addEventListener('pause', () => {
-      if(isOverlayActive) {
+      if(activeOverlay !== false) {
         overlayPlayer.pause()
       }
     })
 
     player.addEventListener('play', () => {
-      if(isOverlayActive) {
+      if(activeOverlay !== false) {
         overlayPlayer.play()
       }
     })
