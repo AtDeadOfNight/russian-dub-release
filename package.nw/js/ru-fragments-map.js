@@ -1,1 +1,1 @@
-window.ruFragmentsMap = {"title":[0,14],"evp":[4939.2,5025.2]}
+window.ruFragmentsMap = {"title":[0,14],"evp":[4939.666666666667,5025.666666666667],"basement_key":[4728.866666666667,4733.866666666667]}

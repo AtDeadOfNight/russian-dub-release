@@ -1411,7 +1411,7 @@ finwords:[
   "<span class='hf'>Дополнительные актёры</span><br>Sam Follin<br>Jamie Follin<br>Tom Follin<br>Clare Follin",7,
   "<span class='hf'>Специальные благодарности</span><br>Mark Wilson<br>Fay Wilkins",7,
   "",1,
-  "Спасибо, что играли в Под Покровом Ночи.<br>Перевод: TDoT. Озвучка: adot.hloth.dev",8,
+  "Спасибо, что играли в Под Покровом Ночи.<br>Перевод: TDoT. Озвучка: adon.hloth.dev",8,
   "",
 
 ],
@@ -1751,7 +1751,7 @@ gnames:[
   "Хьюго"
 ],
 
-transcred:"Русская локализация от TDoT, озвучка: adot.hloth.dev",
+transcred:"Русская локализация от TDoT, озвучка: adon.hloth.dev",
 
 extras:[
   "ПРИВЕТСТВУЕМ ВАС В<br>ОТЕЛЕ SEA VIEW<br><span style='font-size:50%'>КЛИКНИТЕ, ЧТОБЫ ВОЙТИ</span>",

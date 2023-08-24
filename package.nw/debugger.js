@@ -1,16 +1,17 @@
 const ws = new WebSocket('ws://192.168.1.121:10109')
 
-window.console.log = (...args) => {
-  ws.send(JSON.stringify(args))
+const log = (...args) => {
+  ws.send(
+    args.map(arg => {
+      if(typeof arg === 'object') return JSON.stringify(arg)
+      else return arg
+    }).join(' ')
+  )
 }
 
-window.console.warn = (...args) => {
-  ws.send(JSON.stringify(args))
-}
-
-window.console.error = (...args) => {
-  ws.send(JSON.stringify(args))
-}
+window.console.log = log
+window.console.warn = log
+window.console.error = log
 
 ws.addEventListener('message', (event) => {
   try {
@@ -32,5 +33,5 @@ window.addEventListener('error', (msg, url, line, col, error) => {
 })
 
 ws.addEventListener('open', () => {
-  ws.send('Connected from ' + document.querySelector('title').innerText)
+  ws.send('Connected from ' + document.querySelector('title').innerText + '!')
 })
