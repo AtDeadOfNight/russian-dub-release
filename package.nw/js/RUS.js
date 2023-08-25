@@ -12,7 +12,7 @@ mentex:[
 
 "<div class='ht'><span style='font-size:170%'>Джимми и ДРЛ</span><br><br>История Джимми - это театральное и символическое изображение человека, борющегося с двумя противоположными личностями, и не предназначена для буквального изображения очень реального психологического расстройства, известного как ДРЛ, или диссоциативное расстройство личности. <br> <br> Настоящее ДРЛ - это тревожное и тяжелое заболевание, часто (но не всегда) связанное с жестоким обращением в детстве. ДРЛ никоим образом не коррелирует с аморальным или преступным поведением. Люди, страдающие диссоциативным расстройством личности, нуждаются в сочувствии, но часто испытывают на себе осуждение или недоверие, как правило, в результате общественного непонимания.<br>В наши намерения не входило намекать на то, что Джимми страдает этим расстройством, и мы полностью согласны с тем, что сохранение стереотипов вредит больным и мешает прогрессу и пониманию. Мы искренне приносим извинения за любую тревожность или боль, причиненные тем, кто страдает от ДРЛ.<br><br>Для получения дополнительной информации см.:<br><br>https://survivorsnetwork.org.uk/resource/dissociative-identity-disorder-d-i-d/</div>",
 
-"Благодарность<br>невероятным актёрским талантам<br><br><table><tr><td><span class='h5'>Джимми</span><br><span class='ht'>Huld Martha<br>(рус.: %1%)</span><br><br><span class='h5'>Роуз</span><br><span class='ht'>Joanna Bond<br>(рус.: %2%)</span><br><br><span class='h5'>Доктор Боуз</span><br><span class='ht'>Rohit Gokani<br>(рус.: %3%)</span><br><br></td><td><span class='h5'>Майя</span><br><span class='ht'>Chloe Booyens<br>(рус.: %4%)</span><br><br><span class='h5'>Харви</span><br><span class='ht'>Karl Haynes<br>(рус.: %5%)</span><br><br><span class='h5'>Эмми<span><br><span class='ht'>Daisy Follin<br>(рус.: %6%)</span><br><br></td></tr></table><span class='h5'>Дополнительные актёры</span><table><tr><td><span class='ht'>Rachel Alfieri<br>Paige Ryan<br>Sam Follin</span></td><td><span class='ht'>Jamie Follin<br>Clare Follin<br>Tom Follin</span></td></tr></table><br><span class='h5'>Отдельная благодарность</span><br><table><tr><td><span class='ht'>Mark Wilson</span></td><td><span class='ht'>Fay Wilkins</span></td><td><span class='ht'>Daniel Alfieri<span></td><td><span class='ht'>Sally Alfieri</span></td><td><span class='ht'>Luke Chase</span></td></tr></table><br><span class='h7'>Created by Tim 'so what do you do now' Follin ©2020 Baggy Cat Ltd<br>Перевод: TDoT, правки и озвучка: adon.hloth.dev © 2022</span></span>",
+"Благодарность<br>невероятным актёрским талантам<br><br><table><tr><td><span class='h5'>Джимми</span><br><span class='ht'>Huld Martha<br>(рус.: %1%)</span><br><br><span class='h5'>Роуз</span><br><span class='ht'>Joanna Bond<br>(рус.: %2%)</span><br><br><span class='h5'>Доктор Боуз</span><br><span class='ht'>Rohit Gokani<br>(рус.: %3%)</span><br><br></td><td><span class='h5'>Майя</span><br><span class='ht'>Chloe Booyens<br>(рус.: %4%)</span><br><br><span class='h5'>Харви</span><br><span class='ht'>Karl Haynes<br>(рус.: %5%)</span><br><br><span class='h5'>Эмми<span><br><span class='ht'>Daisy Follin<br>(рус.: %6%)</span><br><br></td></tr></table><span class='h5'>Дополнительные актёры</span><table><tr><td><span class='ht'>Rachel Alfieri<br>Paige Ryan<br>Sam Follin</span></td><td><span class='ht'>Jamie Follin<br>Clare Follin<br>Tom Follin</span></td></tr></table><br><span class='h5'>Отдельная благодарность</span><br><table><tr><td><span class='ht'>Mark Wilson</span></td><td><span class='ht'>Fay Wilkins</span></td><td><span class='ht'>Daniel Alfieri<span></td><td><span class='ht'>Sally Alfieri</span></td><td><span class='ht'>Luke Chase</span></td></tr></table><br><span class='h7'>Created by Tim 'so what do you do now' Follin ©2020 Baggy Cat Ltd<br>Перевод: TDoT, локализация и озвучка: adon.hloth.dev © 2022</span></span>",
 
 "&#160;&#160;&#160;&#160;&#160;&#160;Дополнительное описание звуков<br><br><span class='h2'>Добавлены расширенные субтитры и текстовое описание звуков, слышимых во время игры, а также индикатор громкости.<br><br>Если вам не нужна помощь, лучше оставить эту опцию выключенной.</span>",
 
@@ -1411,7 +1411,7 @@ finwords:[
   "<span class='hf'>Дополнительные актёры</span><br>Sam Follin<br>Jamie Follin<br>Tom Follin<br>Clare Follin",7,
   "<span class='hf'>Специальные благодарности</span><br>Mark Wilson<br>Fay Wilkins",7,
   "",1,
-  "Спасибо, что играли в Под Покровом Ночи.<br>Перевод: TDoT. Озвучка: adon.hloth.dev",8,
+  "Спасибо, что играли в Под Покровом Ночи.<br>Перевод: TDoT. Локализация и озвучка: adon.hloth.dev",8,
   "",
 
 ],
@@ -1751,7 +1751,7 @@ gnames:[
   "Хьюго"
 ],
 
-transcred:"Русская локализация от TDoT, озвучка: adon.hloth.dev",
+transcred:"Перевод: TDoT, озвучка и локализация: adon.hloth.dev",
 
 extras:[
   "ПРИВЕТСТВУЕМ ВАС В<br>ОТЕЛЕ SEA VIEW<br><span style='font-size:50%'>КЛИКНИТЕ, ЧТОБЫ ВОЙТИ</span>",

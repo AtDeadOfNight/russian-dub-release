@@ -25,11 +25,22 @@ setTimeout(() => {
 
     console.log('Started up ru-fragments overlay')
 
+    const resetOverlay = () => {
+      activeOverlay = false
+      clearInterval(interval)
+      overlayPlayer.pause()
+      overlayPlayer.currentTime = 0
+      overlayPlayer.removeAttribute('src')
+      overlayPlayer.style.display = 'none'
+    }
+
     const onTimeUpdate = () => {
-      debugMenu.innerText = `playerCurrentTime: ${player.currentTime}\nisOverlayActive: ${activeOverlay !== false}`
       for(const [fragment, time] of fragmentsMap) {
         const fragmentPriority = window.ruFragmentsMap.priorities[fragment]
-        if(player.currentTime >= time[0] && player.currentTime <= time[1]) {
+        const offset = window.ruFragmentsMap.offsets[fragment] || 0
+        const startTime = time[0] + offset
+        const endTime = time[1] + offset
+        if(player.currentTime >= startTime && player.currentTime <= endTime) {
           if(activeOverlay === fragment) return
           const activeOverlayPriority = activeOverlay === false ? -1 : window.ruFragmentsMap.priorities[activeOverlay]
           if(activeOverlay !== false && activeOverlayPriority >= fragmentPriority) {
@@ -48,18 +59,19 @@ setTimeout(() => {
           startFrequentUpdates(time[0])
 
           return
+        } else if(activeOverlay === fragment) {
+          resetOverlay()
         }
       }
 
       if(activeOverlay !== false) {
-        activeOverlay = false
-        clearInterval(interval)
-        overlayPlayer.pause()
-        overlayPlayer.currentTime = 0
-        overlayPlayer.removeAttribute('src')
-        overlayPlayer.style.display = 'none'
+        resetOverlay()
       }
     }
+
+    setInterval(() => {
+      debugMenu.innerText = `playerCurrentTime: ${player.currentTime}\nisOverlayActive: ${activeOverlay !== false}`
+    }, 10)
     
     player.addEventListener('timeupdate', onTimeUpdate)
 
