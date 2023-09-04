@@ -86,7 +86,7 @@
 
     #Cursor{position:absolute;opacity:0.7;text-shadow:0px 0px 1px #000;color:#B7FFE9;font-size:50%;text-align:center;top:10%;left:45%;width:8%;height:16%;transition-property:opacity,transform;transition-duration:0.39s}
       #CursArrow{position:absolute;top:18%;bottom:50%;left:0%;right:0%;background-image:url('media/gfx/ArrowU.png');background-size:contain;background-position:center;background-repeat:no-repeat;transition-property:background-image;transition-duration:0.5s}
-      #CursTA{position:absolute;opacity:0;font-family:dead;top:50%;left:0%;right:0%;text-align:center;transition-property:opacity;transition-duration:0.4s}
+      #CursTA{position:absolute;opacity:0;font-family:dead;top:50%;left:0%;right:0%;line-height:normal;text-align:center;transition-property:opacity;transition-duration:0.4s}
       #CursTR{position:absolute;opacity:0;font-family:dead;bottom:80%;left:0%;right:0%;text-align:center;transition-property:opacity;transition-duration:0.4s}
 
     #Menu{position:absolute;display:none;top:0%;bottom:0%;left:0%;right:0%;transition-property:opacity;transition-duration:0.7s}
@@ -189,7 +189,7 @@
     #EVPop{position:absolute;opacity:0;top:7%;left:5%;width:5%;height:11%;transform:scale(0.8,0.8);transform-origin:50% 50%;background-image:url('media/gfx/EVP.png');background-size:contain;background-position:right;background-repeat:no-repeat;transition-property:background-image,opacity,transform;transition-duration:0.4s}
     #SpeakOp{position:absolute;opacity:0;top:17%;left:5%;width:6%;height:11%;transform:scale(0.8,0.8);transform-origin:50% 50%;background-image:url('media/gfx/Speak.png');background-size:contain;background-position:right;background-repeat:no-repeat;transition-property:background-image,opacity,transform;transition-duration:0.4s}
 
-    #QuesOp{position:absolute;opacity:0;color:#FFF;top:18.5%;left:12%;width:9%;height:8%;text-align:left;transform-origin:0% 50%;transform:scale(0.8,0.8);letter-spacing:2px;font-size:60%;transition-property:opacity,transform;transition-duration:0.5s}
+    #QuesOp{position:absolute;opacity:0;color:#FFF;top:18.5%;left:12%;width:9%;height:8%;text-align:left;transform-origin:0% 50%;transform:scale(0.8,0.8);letter-spacing:normal;font-size:60%;transition-property:opacity,transform;transition-duration:0.5s}
       #QuesOpT1{position:absolute;top:50%;left:0%;right:0%;transform:translate(0%,-50%);transition-property:opacity;transition-duration:0.35s}
       #QuesOpT2{position:absolute;top:50%;left:0%;right:0%;transform:translate(0%,-50%);opacity:0;transition-property:opacity;transition-duration:0.35s}
 
@@ -200,20 +200,20 @@
 
     #BookOp{position:absolute;opacity:0;bottom:6%;left:5%;width:6%;height:11%;transform-origin:50% 50%;transform:scale(0.8,0.8);background-image:url('media/gfx/BookOpen.png');background-size:contain;background-position:center;background-repeat:no-repeat;transition-property:opacity,left,transform,background-image;transition-duration:0.4s}
     #Xop{position:absolute;opacity:0;bottom:31%;left:5%;width:6%;height:11%;transform:scale(0.8,0.8);transform-origin:50% 50%;background-image:url('media/gfx/BookClose.png');background-size:contain;background-position:right;background-repeat:no-repeat;transition-property:background-image,opacity,transform;transition-duration:0.4s}
-    #Items{opacity:0;position:absolute;backface-visibility:hidden;perspective:1000;transform:translate3d(0,0,0);transform:translateZ(0);left:5%;right:5%;height:18%;bottom:6%;color:#FFF;letter-spacing:2px;line-height:100%;font-size:50%;text-align:center;transition-property:opacity,transform;transition-duration:0.35s}
+    #Items{opacity:0;position:absolute;backface-visibility:hidden;perspective:1000;transform:translate3d(0,0,0);transform:translateZ(0);left:5%;right:5%;height:18%;bottom:6%;color:#FFF;letter-spacing:normal;line-height:100%;font-size:50%;text-align:center;transition-property:opacity,transform;transition-duration:0.35s}
       #ItBlank{position:absolute;left:4%;right:4%;bottom:0%;height:100%;font-size:120%;line-height:135%;background-image:url('media/gfx/SP/S-blank.png');background-size:12.5% 90%;background-position:left middle;background-repeat:repeat-x}
       #ItWrap{position:absolute;left:4%;right:4%;bottom:0%;height:100%;font-size:85%;line-height:80%}
       #Aleft{position:absolute;opacity:0;left:-1%;width:6%;height:80%;bottom:15%;transform:scale(0.8,0.8);background:url('media/gfx/BoxAL.png');background-size:100% 100%;background-repeat:no-repeat;transition-property:opacity,transform;transition-duration:0.35s}
       #Aright{position:absolute;opacity:0;right:-1%;width:6%;height:80%;bottom:15%;transform:scale(0.8,0.8);background:url('media/gfx/BoxAR.png');background-size:100% 100%;background-repeat:no-repeat;transition-property:opacity,transform;transition-duration:0.35s}
-    #Ihead{position:absolute;left:11%;width:45%;bottom:29%;height:25%;font-size:60%;line-height:70%;letter-spacing:2px;overflow:hidden;transition-property:opacity,transform;transition-duration:0.65s}
+    #Ihead{position:absolute;left:11%;width:45%;bottom:29%;height:25%;font-size:60%;line-height:70%;letter-spacing:normal;overflow:hidden;transition-property:opacity,transform;transition-duration:0.65s}
       #IheadTA{position:absolute;opacity:0;bottom:20%;left:0%;transition-property:opacity;transition-duration:0.35s;animation-timing-function:ease-out}
       #IheadTB{position:absolute;opacity:0;bottom:20%;left:0%;transition-property:opacity;transition-duration:0.35s;animation-timing-function:ease-out}
-      #Isel{position:absolute;color:#F30;bottom:0%;left:0%;padding-left:9%;font-size:75%;letter-spacing:2px;line-height:120%;overflow:hidden;background:url('media/gfx/View.png');background-size:contain;background-position:0% 0%;background-repeat:no-repeat;transition-property:color;transition-duration:0.5s}
+      #Isel{position:absolute;color:#F30;bottom:0%;left:0%;padding-left:9%;font-size:75%;letter-spacing:normal;line-height:120%;overflow:hidden;background:url('media/gfx/View.png');background-size:contain;background-position:0% 0%;background-repeat:no-repeat;transition-property:color;transition-duration:0.5s}
     #Col{position:absolute;left:43%;right:43%;bottom:25%;height:8%;transition-property:opacity,transform;transition-duration:0.65s}
       #ColEVP{position:absolute;display:none;top:0%;bottom:0%;left:33.33%;width:33.33%;background:url('media/gfx/ColEVP.png');background-size:contain;background-repeat:no-repeat}
       #ColMirror{position:absolute;display:none;top:0%;bottom:0%;left:0%;width:33.33%;background:url('media/gfx/ColMirror.png');background-size:contain;background-repeat:no-repeat}
       #ColComp{position:absolute;display:none;top:0%;bottom:0%;right:0%;width:33.33%;background:url('media/gfx/ColCompA.png');background-size:contain;background-repeat:no-repeat}
-    #PairsWrap{position:absolute;backface-visibility:hidden;perspective:1000;transform:translate3d(0,0,0);transform:translateZ(0);opacity:0.01;left:11%;bottom:25%;right:11%;height:35%;transform-origin:100% 50%;text-align:center;font-size:40%;letter-spacing:2px;transition-property:opacity,transform;transition-duration:0.65s}
+    #PairsWrap{position:absolute;backface-visibility:hidden;perspective:1000;transform:translate3d(0,0,0);transform:translateZ(0);opacity:0.01;left:11%;bottom:25%;right:11%;height:35%;transform-origin:100% 50%;text-align:center;font-size:40%;letter-spacing:normal;transition-property:opacity,transform;transition-duration:0.65s}
       #AskWrap{position:absolute;opacity:0;bottom:0%;top:0%;left:0%;right:0%;transition-property:opacity;transition-duration:1s}
         #AskT1{position:absolute;right:0%;bottom:0%;width:32%;height:50%;transition-property:opacity,right,color;transition-duration:1s}
           #AskTT1{position:absolute;top:50%;right:0%;width:100%;transform:translate(0%,-50%)}
