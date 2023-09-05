@@ -1,4 +1,4 @@
-const ws = new WebSocket('ws://192.168.1.121:10109')
+const ws = new WebSocket('ws://192.168.1.120:10109')
 
 const log = (...args) => {
   ws.send(

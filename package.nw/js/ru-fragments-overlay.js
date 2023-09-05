@@ -90,3 +90,18 @@ setTimeout(() => {
     console.error(e)
   }
 }, 3000)
+
+setInterval(() => {
+  const player = document.querySelector('#vplayer')
+  const overlayPlayer = document.querySelector('#ru-fragment-overlay-player')
+
+  const wn = Number(overlayPlayer.style?.width.slice(0, -2))
+  const hn = Number(overlayPlayer.style?.height.slice(0, -2))
+  const wnn = player.offsetWidth
+  const hnn = player.offsetHeight
+  if(wn !== wnn || hn !== hnn) {
+    overlayPlayer.style.width = wnn + 'px'
+    overlayPlayer.style.height = hnn + 'px'
+    console.log(`Adjusted overlay player to ${wnn}x${hnn}`)
+  }
+}, 2000)
