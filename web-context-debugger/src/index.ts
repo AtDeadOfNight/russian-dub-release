@@ -37,6 +37,10 @@ fastify.register(async function (fastify) {
   })
 })
 
+fastify.get('/test', (request, reply) => {
+  reply.send('It works!')
+})
+
 try {
   await fastify.listen({ port: 10109, host: '0.0.0.0' })
   console.log('Listening on port 10109')
