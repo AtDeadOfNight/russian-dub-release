@@ -18,6 +18,9 @@
 | searchon   | number                   | 0 or 1 indicating whether you're searching right now  |
 | jmop       | [string, string]         | Array like `["6016","W"]` indicating Jimmy's position |
 | pos        | [number, number, string] | Array like `[60,16,"W"]` indicating Maya's position   |
+| jhfloor    | number                   | Floor on which Jimmy at (from 0 to 4)                 |
+| jhinroom   | number                   | Room number in which Jimmy is                         |
+| menon      | 0 \| 1                   | Is menu visible                                       |
 |            |                          |                                                       |
 
 ## Positions
