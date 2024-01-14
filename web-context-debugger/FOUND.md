@@ -21,6 +21,7 @@
 | jhfloor    | number                   | Floor on which Jimmy at (from 0 to 4)                 |
 | jhinroom   | number                   | Room number in which Jimmy is                         |
 | menon      | 0 \| 1                   | Is menu visible                                       |
+| stairs     | 0 \| 2                   | Is Maya on stairs                                     |
 |            |                          |                                                       |
 
 ## Positions
