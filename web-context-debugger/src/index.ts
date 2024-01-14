@@ -57,3 +57,4 @@ rl.on('SIGINT', function() {
 })
 
 //Object.keys(window).map(k => [k, typeof window[k], typeof window[k] === 'function' ? window[k].length : (typeof window[k] === 'object' && window[k] !== null && window[k] !== undefined && !Array.isArray(window[k])) ? Object.keys(window[k]) : Array.isArray(window[k]) ? [...window[k].slice(0, 5), '+...'] : window[k]]).join(';')
+//Object.fromEntries(Object.keys(window).map(k => [k, typeof window[k]]))
