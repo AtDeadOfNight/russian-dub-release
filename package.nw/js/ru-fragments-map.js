@@ -1,1 +1,2 @@
+// The purpose of this file is to export a map of every overlay fragment with russian text in the game
 window.ruFragmentsMap = {"timestamps":{"title":[0,14],"evp":[4939.666666666667,5025.966666666667],"basement_key":[4728.866666666667,4734.166666666667],"out-of-order":[69.86666666666666,75.59999966666666]},"priorities":{"title":1,"evp":3,"basement_key":2,"out-of-order":1},"offsets":{"out-of-order":-0.1}}

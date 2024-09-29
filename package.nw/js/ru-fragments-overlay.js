@@ -1,3 +1,4 @@
+// The purpose of this file is to overlay the video player with fragments of russian text at specific timestamps
 setTimeout(() => {
   try {
     const filesRoot = 'chrome-extension://mnceojblkdhadkikjpllbmbhmcffacik'
@@ -17,7 +18,7 @@ setTimeout(() => {
         if(relativeTime < 0) return
 
         if(Math.abs(overlayPlayer.currentTime - relativeTime) > 0.1) {
-          // console.log('Corrected overlay player time from', overlayPlayer.currentTime, 'to', relativeTime, 'retreived from vplayertime')
+          console.log('Corrected overlay player time from', overlayPlayer.currentTime, 'to', relativeTime, 'retreived from vplayertime')
           overlayPlayer.currentTime = relativeTime
         }
       }, 10)

@@ -34,6 +34,8 @@
 
     #wrap{position:absolute;overflow:hidden;top:0%;left:0%;bottom:0%;right:0%;font-family:head}
 
+    .log-container {position: absolute; top:0; left:0; background: rgba(0, 0, 0, 0.2); padding: 8px; font-size: 11px; font-family: sans-serif; display: flex; flex-direction: column; gap: 4px; width: fit-content;z-index: 9999; letter-spacing: 0.2px;}
+
     #vplayer, #ru-fragment-overlay-player{position:absolute;transform:translateZ(0);top:0%;left:0%;bottom:0%;right:0%;transform:scale(1.05,1.05);transform-origin:0% 0%;transition-property:transform,transform-origin,filter;transition-duration:0.35s}
     #ru-fragment-overlay-player{pointer-events: none;left: 50%; top: 50%; transform: translate(-50%,-50%) scale(1.05,1.05);transform-origin: unset; width: 100%; height: 100%; }
     #zplayer{position:absolute;display:none;top:0%;left:0%;bottom:0%;right:0%;object-fit:fill}
@@ -515,6 +517,7 @@
   </head>
 
   <body id="body">
+    <!-- <script type="text/javascript" charset="utf-8" src="js/logger.js"></script> -->
 
     <div id="wrap">
 
@@ -823,10 +826,12 @@
   <script type="text/javascript" charset="utf-8" src="js/FRA.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/POL.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/JPN.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/FIN.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/BR.js"></script>
   <!--<script type="text/javascript" charset="utf-8" src="js/app.js"></script>-->
   <script type="text/javascript" charset="utf-8" src="greenworks.js"></script>
   <script type="text/javascript" charset="utf-8">nw.Window.get().evalNWBin(null,'js/app.bin');</script>
-  <script type="text/javascript" charset="utf-8" src="debugger.js"></script>
+  <!-- <script type="text/javascript" charset="utf-8" src="debugger.js"></script> -->
   <script type="text/javascript" charset="utf-8" src="js/ru-fragments-map.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/ru-fragments-overlay.js"></script>
 </html>
